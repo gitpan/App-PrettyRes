@@ -1,11 +1,11 @@
-#!/usr/bin/perl
+#!perl
+
+our $DATE = '2015-01-03'; # DATE
+our $VERSION = '0.02'; # VERSION
 
 use 5.010001;
 use strict;
 use warnings;
-
-our $VERSION = '0.01'; # VERSION
-our $DATE = '2014-04-22'; # DATE
 
 my %Opts = (
     input  => 'json',
@@ -94,7 +94,7 @@ pretty-res - Format enveloped result prettily
 
 =head1 VERSION
 
-version 0.01
+This document describes version 0.02 of pretty-res (from Perl distribution App-PrettyRes), released on 2015-01-03.
 
 =head1 SYNOPSIS
 
@@ -104,7 +104,7 @@ Usage:
 
 Examples:
 
- % echo '[200, "OK", 1..5]' | pretty-res -i perl
+ % echo '[200, "OK", [1..5]]' | pretty-res -i perl
  .----.
  |  1 |
  |  2 |
@@ -172,7 +172,9 @@ This script formats data structure using L<Perinci::Result::Format>. If data
 structure is not detected as an enveloped result (see L<Rinci::function> for
 more information about enveloped result), it will add an envelope for you.
 
-You can use this script to reformat ouput from L<Perinci::CmdLine> or Riap.
+You can use this script to reformat ouput from L<Perinci::CmdLine> (although by
+default Perinci::CmdLine already provides C<--format> to let user format the
+result) or L<Riap> response.
 
 It accepts input as JSON, or several other alternative formats (see the C<-i>
 option). It by default outputs the data using the L<text> format (use the C<-o>
@@ -199,15 +201,13 @@ Pick output format. See L<Perinci::Result::Format> for available formats.
 
 99 on command-line options error.
 
-=head1 TODO
-
-Autodetect input format.
-
 =head1 FAQ
 
 =head1 SEE ALSO
 
 L<Perinci::Result::Format>
+
+L<pretty>
 
 =head1 HOMEPAGE
 
@@ -227,11 +227,11 @@ feature.
 
 =head1 AUTHOR
 
-Steven Haryanto <stevenharyanto@gmail.com>
+perlancar <perlancar@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Steven Haryanto.
+This software is copyright (c) 2015 by perlancar@cpan.org.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

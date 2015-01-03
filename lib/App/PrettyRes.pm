@@ -1,7 +1,7 @@
 package App::PrettyRes;
 
-our $VERSION = '0.01'; # VERSION
-our $DATE = '2014-04-22'; # DATE
+our $VERSION = '0.02'; # VERSION
+our $DATE = '2015-01-03'; # DATE
 
 1;
 # ABSTRACT: Format enveloped result prettily
@@ -18,7 +18,7 @@ App::PrettyRes - Format enveloped result prettily
 
 =head1 VERSION
 
-version 0.01
+This document describes version 0.02 of App::PrettyRes (from Perl distribution App-PrettyRes), released on 2015-01-03.
 
 =head1 SYNOPSIS
 
@@ -42,11 +42,11 @@ feature.
 
 =head1 AUTHOR
 
-Steven Haryanto <stevenharyanto@gmail.com>
+perlancar <perlancar@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Steven Haryanto.
+This software is copyright (c) 2015 by perlancar@cpan.org.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
